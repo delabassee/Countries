@@ -30,27 +30,6 @@ public class Countries {
         public String toString() {
             return iso + " - " + code + " - " + name;
         }
-
-    }
-
-
-    public static List<Country> getAll() {
-
-        List<Country> countries = new ArrayList<Country>();
-        String[] isoCountries = Locale.getISOCountries();
-
-        for (String country : isoCountries) {
-            Locale locale = new Locale("en", country);
-            String iso = locale.getISO3Country();
-            String code = locale.getCountry();
-            String name = locale.getDisplayCountry();
-
-            if (!"".equals(iso) && !"".equals(code) && !"".equals(name)) {
-                countries.add(new Country(iso, code, name));
-            }
-        }
-
-        return countries;
     }
 
 
@@ -69,6 +48,7 @@ public class Countries {
     }
 
 
+
     public static String getCode(String countryName) {
 
         String[] isoCountries = Locale.getISOCountries();
@@ -82,5 +62,27 @@ public class Countries {
         }
         return "not found";
     }
+
+
+    public static List<Country> getAllCountries() {
+
+        List<Country> countries = new ArrayList<Country>();
+        String[] isoCountries = Locale.getISOCountries();
+
+        for (String country : isoCountries) {
+            Locale locale = new Locale("en", country);
+            String iso = locale.getISO3Country();
+            String code = locale.getCountry();
+            String name = locale.getDisplayCountry();
+
+            if (!"".equals(iso) && !"".equals(code) && !"".equals(name)) {
+                countries.add(new Country(iso, code, name));
+            }
+        }
+
+        return countries;
+
+    }
+
 
 }
