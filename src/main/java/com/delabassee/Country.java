@@ -2,9 +2,8 @@ package com.delabassee;
 
 import java.util.*;
 
-public class Countries {
+public class Country {
 
-    static class Country {
         private String iso;
         private String code;
         private String name;
@@ -30,10 +29,9 @@ public class Countries {
         public String toString() {
             return iso + " - " + code + " - " + name;
         }
-    }
 
 
-    public static String getName(String countryCode) {
+    public static String getNameByCode(String countryCode) {
 
         String[] isoCountries = Locale.getISOCountries();
         String upperCode = countryCode.toUpperCase();
@@ -48,8 +46,7 @@ public class Countries {
     }
 
 
-
-    public static String getCode(String countryName) {
+    public static String getCodeByName(String countryName) {
 
         String[] isoCountries = Locale.getISOCountries();
         String upperName = countryName.toUpperCase();
@@ -64,7 +61,7 @@ public class Countries {
     }
 
 
-    public static List<Country> getAllCountries() {
+    public static List<Country> getAll() {
 
         List<Country> countries = new ArrayList<Country>();
         String[] isoCountries = Locale.getISOCountries();
@@ -79,7 +76,6 @@ public class Countries {
                 countries.add(new Country(iso, code, name));
             }
         }
-
         return countries;
 
     }
