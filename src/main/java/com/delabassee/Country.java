@@ -2,33 +2,34 @@ package com.delabassee;
 
 import java.util.*;
 
-public class Country {
+public final class Country {
 
-        private String iso;
-        private String code;
-        private String name;
+    private String iso;
+    private String code;
+    private String name;
 
-        Country(String iso, String code, String name) {
-            this.iso = iso;
-            this.code = code;
-            this.name = name;
-        }
+    Country(String iso, String code, String name) {
+        this.iso = iso;
+        this.code = code;
+        this.name = name;
+    }
 
-        public String getIso() {
-            return iso;
-        }
+    // ISO 3166
+    public String getIso() {
+        return iso;
+    }
 
-        public String getCode() {
-            return code;
-        }
+    public String getCode() {
+        return code;
+    }
 
-        public String getName() {
-            return name;
-        }
+    public String getName() {
+        return name;
+    }
 
-        public String toString() {
-            return iso + " - " + code + " - " + name;
-        }
+    public String toString() {
+        return iso + " - " + code + " - " + name;
+    }
 
 
     public static String getNameByCode(String countryCode) {
@@ -79,6 +80,5 @@ public class Country {
         return countries;
 
     }
-
 
 }
