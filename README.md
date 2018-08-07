@@ -1,5 +1,5 @@
 ### Countries
-Basic dependency that simply generate a list of countries; used by this [kotlin sample](https://github.com/delabassee/fn-snippets/tree/master/kt-kountry). Nothing more!
+Basic dependency that simply generate a list of countries; used by this [kotlin sample](https://github.com/delabassee/fn-snippets/tree/master/kt-kountry) from this [Medium post](kotlin Sample to illustrate this [Medium post](https://medium.com/fnproject/kotlin-and-the-java-fdk-ffcf1778c74a).). Nothing more!
 
 #### Maven Coordinates
 ```xml
